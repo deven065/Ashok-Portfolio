@@ -21,7 +21,7 @@ export default function Home() {
             <h1 className="text-[32px] xs:text-[40px] sm:text-[52px] md:text-[64px] lg:text-[68px] leading-tight md:leading-[1.08] font-extrabold tracking-tight text-[#0f172a]">
               <span className="block animate-fade-in-up delay-100">Transforming</span>
               <span className="block animate-fade-in-up delay-200">Data Into</span>
-              <span className="block bg-[linear-gradient(90deg,_#0b3a7a_0%,_#1e3a8a_22%,_#55636a_50%,_#9aa36b_70%,_#f1c40f_100%)] bg-clip-text text-transparent animate-fade-in-up delay-300">
+              <span className="block bg-[linear-gradient(90deg,#0b3a7a_0%,#1e3a8a_22%,#55636a_50%,#9aa36b_70%,#f1c40f_100%)] bg-clip-text text-transparent animate-fade-in-up delay-300">
                 Powerful Insights
               </span>
             </h1>
