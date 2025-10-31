@@ -1,0 +1,14 @@
+{
+  "MD013": false,
+  "MD022": false,
+  "MD032": false,
+  "MD031": false,
+  "MD040": false,
+  "MD009": false,
+  "no-trailing-spaces": false,
+  "blanks-around-headings": false,
+  "blanks-around-lists": false,
+  "blanks-around-fences": false,
+  "fenced-code-language": false,
+  "line-length": false
+}

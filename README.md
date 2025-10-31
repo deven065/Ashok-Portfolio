@@ -28,6 +28,7 @@
 ## ✨ Features
 
 ### 🎯 **Core Features**
+
 - **Modern Design**: Clean, professional UI with gradient accents
 - **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
 - **Professional Animations**: Smooth transitions and scroll-triggered animations
@@ -35,6 +36,7 @@
 - **Contact Integration**: Direct email and LinkedIn connectivity
 
 ### 🔧 **Technical Features**
+
 - **Performance Optimized**: Fast loading with Next.js optimization
 - **SEO Ready**: Proper meta tags and semantic HTML structure
 - **Accessibility**: WCAG compliant with proper ARIA labels
@@ -42,6 +44,7 @@
 - **Modern CSS**: Tailwind CSS v4 with custom utilities
 
 ### 📱 **Responsive Breakpoints**
+
 - **Mobile**: 320px+ (iPhone SE and up)
 - **Mobile Large**: 475px+ (iPhone 12 Pro and up)
 - **Tablet**: 640px+ (iPad and up)
@@ -51,16 +54,19 @@
 ## 🛠 Tech Stack
 
 ### **Frontend Framework**
+
 - **[Next.js 16.0.0](https://nextjs.org/)** - React framework with App Router
 - **[React 19.2.0](https://reactjs.org/)** - UI library with latest features
 - **[TypeScript 5.6.3](https://www.typescriptlang.org/)** - Type-safe JavaScript
 
 ### **Styling & UI**
+
 - **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Lucide React](https://lucide.dev/)** - Beautiful, customizable icons
 - **Custom CSS Animations** - Professional motion design
 
 ### **Development Tools**
+
 - **[ESLint](https://eslint.org/)** - Code linting and formatting
 - **[PostCSS](https://postcss.org/)** - CSS processing
 - **[Git](https://git-scm.com/)** - Version control
@@ -69,7 +75,7 @@
 
 ### Prerequisites
 
-- **Node.js 18.0+** 
+- **Node.js 18.0+**
 - **npm 9.0+** or **yarn 1.22+**
 - **Git**
 
