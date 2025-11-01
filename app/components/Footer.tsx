@@ -6,9 +6,9 @@ export default function Footer() {
           © {new Date().getFullYear()} <span className="font-medium text-gray-900">Ashok</span>. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
-          <a href="#portfolio" className="hover:text-gray-900">Portfolio</a>
-          <a href="#skills" className="hover:text-gray-900">Skills</a>
-          <a href="#contact" className="hover:text-gray-900">Contact</a>
+          <a href="#portfolio" className="hover:text-[#2563EB] transition-colors duration-300">Portfolio</a>
+          <a href="#skills" className="hover:text-[#2563EB] transition-colors duration-300">Skills</a>
+          <a href="#contact" className="hover:text-[#2563EB] transition-colors duration-300">Contact</a>
         </div>
       </div>
     </footer>

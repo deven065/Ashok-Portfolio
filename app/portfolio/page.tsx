@@ -166,7 +166,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-6">
           <Link 
             href="/#portfolio" 
-            className="inline-flex items-center gap-2 text-[#0f2454] hover:text-[#1e40af] transition-colors mb-8 group"
+            className="inline-flex items-center gap-2 text-[#0f2454] hover:text-[#2563EB] transition-colors mb-8 group"
           >
             <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
             <span>Back to Home</span>
@@ -210,7 +210,7 @@ export default function PortfolioPage() {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#0f172a] mb-2 group-hover:text-[#1e40af] transition-colors">
+                  <h3 className="text-xl font-semibold text-[#0f172a] mb-2 group-hover:text-[#2563EB] transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">
@@ -257,7 +257,7 @@ export default function PortfolioPage() {
                     </a>
                     <a 
                       href={project.githubUrl}
-                      className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:bg-gray-50 transition-colors"
+                      className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-colors"
                     >
                       <Github size={16} />
                       Code
@@ -286,7 +286,7 @@ export default function PortfolioPage() {
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-[#0f2454] text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 text-gray-700 hover:bg-[#2563EB] hover:text-white'
                 }`}
               >
                 {category}
@@ -317,7 +317,7 @@ export default function PortfolioPage() {
                 </div>
                 
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-[#0f172a] mb-2 group-hover:text-[#1e40af] transition-colors">
+                  <h3 className="text-lg font-semibold text-[#0f172a] mb-2 group-hover:text-[#2563EB] transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-3">
@@ -332,13 +332,13 @@ export default function PortfolioPage() {
                   <div className="flex gap-2">
                     <a 
                       href={project.demoUrl}
-                      className="flex-1 text-center bg-[#0f2454] text-white text-sm px-3 py-2 rounded-md hover:bg-[#1e40af] transition-colors"
+                      className="flex-1 text-center bg-[#0f2454] text-white text-sm px-3 py-2 rounded-md hover:bg-[#2563EB] transition-colors"
                     >
                       View Details
                     </a>
                     <a 
                       href={project.githubUrl}
-                      className="p-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+                      className="p-2 border border-gray-300 text-gray-700 rounded-md hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-colors"
                     >
                       <Github size={16} />
                     </a>
@@ -369,7 +369,7 @@ export default function PortfolioPage() {
             </Link>
             <Link 
               href="/#about"
-              className="border border-[#0f2454] text-[#0f2454] font-semibold px-8 py-3 rounded-md hover:bg-[#0f2454] hover:text-white transition-all duration-300 hover:scale-105"
+              className="border border-[#0f2454] text-[#0f2454] font-semibold px-8 py-3 rounded-md hover:bg-[#2563EB] hover:border-[#2563EB] hover:text-white transition-all duration-300 hover:scale-105"
             >
               Learn More About Me
             </Link>

@@ -67,17 +67,17 @@ export default function Home() {
 
               {/* STATS GRID */}
               <div className="grid grid-cols-2">
-                <div className="bg-[#e5edff] text-center py-3 sm:py-4 md:py-5 hover:bg-[#dae8ff] transition-colors duration-300">
-                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#1e3a8a]">50+</p>
-                  <p className="text-xs sm:text-sm text-[#334155]">Projects</p>
+                <div className="bg-[#e5edff] text-center py-3 sm:py-4 md:py-5 hover:bg-[#2563EB] hover:text-white transition-colors duration-300">
+                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#1e3a8a] hover:text-white transition-colors duration-300">50+</p>
+                  <p className="text-xs sm:text-sm text-[#334155] hover:text-white transition-colors duration-300">Projects</p>
                 </div>
                 <div className="bg-[#fff6c7] text-center py-3 sm:py-4 md:py-5 hover:bg-[#fef3b7] transition-colors duration-300">
                   <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#ca8a04]">8+</p>
                   <p className="text-xs sm:text-sm text-[#334155]">Years</p>
                 </div>
-                <div className="bg-[#e5edff] text-center py-3 sm:py-4 md:py-5 hover:bg-[#dae8ff] transition-colors duration-300">
-                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#1e3a8a]">100%</p>
-                  <p className="text-xs sm:text-sm text-[#334155]">Client Sat.</p>
+                <div className="bg-[#e5edff] text-center py-3 sm:py-4 md:py-5 hover:bg-[#2563EB] hover:text-white transition-colors duration-300">
+                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#1e3a8a] hover:text-white transition-colors duration-300">100%</p>
+                  <p className="text-xs sm:text-sm text-[#334155] hover:text-white transition-colors duration-300">Client Sat.</p>
                 </div>
                 <div className="bg-[#fff6c7] text-center py-3 sm:py-4 md:py-5 hover:bg-[#fef3b7] transition-colors duration-300">
                   <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#ca8a04]">$2M+</p>
@@ -136,7 +136,7 @@ export default function Home() {
               <h2 className="text-xl sm:text-2xl font-bold text-[#0f172a]">Featured Projects</h2>
               <p className="text-sm text-gray-600 mt-2">A snapshot of recent work</p>
             </div>
-            <Link href="#contact" className="text-sm font-medium text-[#0f2454] hover:underline whitespace-nowrap">
+            <Link href="#contact" className="text-sm font-medium text-[#0f2454] hover:text-[#2563EB] hover:underline whitespace-nowrap transition-colors duration-300">
               Start a project →
             </Link>
           </div>
@@ -155,7 +155,7 @@ export default function Home() {
                   <Image src={p.img} alt="project cover" fill className="object-contain p-6 transition-transform duration-500 group-hover:scale-110" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-[#0f172a] group-hover:text-[#0f2454] transition-colors duration-300">
+                  <h3 className="font-semibold text-[#0f172a] group-hover:text-[#2563EB] transition-colors duration-300">
                     {p.title}
                   </h3>
                   <p className="mt-1.5 text-sm text-gray-600">Interactive visuals, clear KPIs, actionable insights.</p>
@@ -164,7 +164,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-6 text-center">
-            <Link href="/portfolio" className="text-sm font-medium text-[#0f2454] hover:underline">
+            <Link href="/portfolio" className="text-sm font-medium text-[#0f2454] hover:text-[#2563EB] hover:underline transition-colors duration-300">
               View full portfolio →
             </Link>
           </div>
@@ -194,7 +194,7 @@ export default function Home() {
               <div key={e.role} className={`rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-500 animate-fade-in-up`} style={{ animationDelay: `${0.1 + index * 0.1}s` }}>
                 <div className="flex items-center justify-between gap-4">
                   <h3 className="font-semibold text-[#0f172a]">{e.role}</h3>
-                  <span className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-700 border border-gray-200 transition-colors duration-300 hover:bg-[#e8f0fe] hover:text-[#1e3a8a]">
+                  <span className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-700 border border-gray-200 transition-colors duration-300 hover:bg-[#2563EB] hover:text-white">
                     {e.time}
                   </span>
                 </div>
@@ -238,9 +238,9 @@ export default function Home() {
               <h3 className="font-semibold text-[#0f172a] text-base sm:text-lg">Availability</h3>
               <p className="text-sm text-gray-700 mt-2">Open to freelance and full-time roles.</p>
               <div className="mt-4 grid grid-cols-2 gap-2 sm:gap-3 text-center">
-                <div className="rounded-lg bg-[#e8f0fe] py-2 sm:py-3 hover:bg-[#dae8ff] transition-all duration-300 hover:scale-105">
-                  <p className="text-xs text-[#1e3a8a]">Response time</p>
-                  <p className="font-semibold text-[#1e3a8a] text-sm">~24 hrs</p>
+                <div className="rounded-lg bg-[#e8f0fe] py-2 sm:py-3 hover:bg-[#2563EB] transition-all duration-300 hover:scale-105 group">
+                  <p className="text-xs text-[#1e3a8a] group-hover:text-white transition-colors duration-300">Response time</p>
+                  <p className="font-semibold text-[#1e3a8a] text-sm group-hover:text-white transition-colors duration-300">~24 hrs</p>
                 </div>
                 <div className="rounded-lg bg-[#fff6c7] py-2 sm:py-3 hover:bg-[#fef3b7] transition-all duration-300 hover:scale-105">
                   <p className="text-xs text-[#ca8a04]">Timezone</p>
