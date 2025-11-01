@@ -166,17 +166,17 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-6">
           <Link 
             href="/#portfolio" 
-            className="inline-flex items-center gap-2 text-[#0f2454] hover:text-[#2563EB] transition-colors mb-8 group"
+            className="inline-flex items-center gap-2 text-[#D1D5DB] hover:text-[#2563EB] transition-colors mb-8 group"
           >
             <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
             <span>Back to Home</span>
           </Link>
           
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] mb-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#F9FAFB] mb-4">
               Data Analytics Portfolio
             </h1>
-            <p className="text-lg text-gray-600 max-w-3xl">
+            <p className="text-lg text-[#D1D5DB] max-w-3xl">
               Explore my comprehensive collection of data analysis projects, from business intelligence dashboards 
               to machine learning models, each delivering measurable business impact.
             </p>
@@ -185,62 +185,62 @@ export default function PortfolioPage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-8 md:py-12 bg-white/70 backdrop-blur">
+      <section className="py-8 md:py-12 bg-gradient-to-r from-[#2563EB]/10 to-[#3b82f6]/10">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[#0f172a] mb-8 animate-fade-in-up">Featured Projects</h2>
+          <h2 className="text-2xl font-bold text-[#F9FAFB] mb-8 animate-fade-in-up">Featured Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`group bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up`}
+                className={`group bg-[#1F2937] rounded-2xl shadow-lg border border-gray-600/30 overflow-hidden hover:shadow-xl hover:border-[#2563EB]/50 transition-all duration-500 hover:scale-105 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative h-48 bg-gray-50 overflow-hidden">
+                <div className="relative h-48 bg-[#374151] overflow-hidden">
                   <Image 
                     src={project.image} 
                     alt={project.title}
                     fill 
-                    className="object-contain p-8 transition-transform duration-500 group-hover:scale-110" 
+                    className="object-contain p-8 transition-transform duration-500 group-hover:scale-110 filter brightness-0 invert opacity-70 group-hover:opacity-100" 
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-[#0f2454] text-white text-xs px-3 py-1 rounded-full">
+                    <span className="bg-[#2563EB] text-white text-xs px-3 py-1 rounded-full">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#0f172a] mb-2 group-hover:text-[#2563EB] transition-colors">
+                  <h3 className="text-xl font-semibold text-[#F9FAFB] mb-2 group-hover:text-[#2563EB] transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  <p className="text-[#D1D5DB] text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
                   
                   {/* Metrics */}
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="flex items-center gap-2">
-                      <TrendingUp size={16} className="text-[#0f2454]" />
-                      <span className="text-sm font-medium text-[#0f2454]">{project.metrics.impact}</span>
+                      <TrendingUp size={16} className="text-[#2563EB]" />
+                      <span className="text-sm font-medium text-[#2563EB]">{project.metrics.impact}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calendar size={16} className="text-gray-500" />
-                      <span className="text-sm text-gray-600">{project.metrics.timeframe}</span>
+                      <Calendar size={16} className="text-[#D1D5DB]" />
+                      <span className="text-sm text-[#D1D5DB]">{project.metrics.timeframe}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <BarChart3 size={16} className="text-gray-500" />
-                      <span className="text-sm text-gray-600">{project.metrics.accuracy}</span>
+                      <BarChart3 size={16} className="text-[#D1D5DB]" />
+                      <span className="text-sm text-[#D1D5DB]">{project.metrics.accuracy}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Users size={16} className="text-gray-500" />
-                      <span className="text-sm text-gray-600">{project.metrics.users}</span>
+                      <Users size={16} className="text-[#D1D5DB]" />
+                      <span className="text-sm text-[#D1D5DB]">{project.metrics.users}</span>
                     </div>
                   </div>
                   
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded border">
+                      <span key={tech} className="text-xs px-2 py-1 bg-[#374151] text-[#D1D5DB] rounded border border-gray-600/30">
                         {tech}
                       </span>
                     ))}
@@ -250,14 +250,14 @@ export default function PortfolioPage() {
                   <div className="flex gap-3">
                     <a 
                       href={project.demoUrl}
-                      className="inline-flex items-center gap-2 btn-primary-gradient btn-animated text-white text-sm px-4 py-2 rounded-md hover:scale-105 transition-all duration-300"
+                      className="inline-flex items-center gap-2 bg-[#2563EB] text-white text-sm px-4 py-2 rounded-md hover:bg-blue-600 hover:scale-105 transition-all duration-300"
                     >
                       <Eye size={16} />
                       View Demo
                     </a>
                     <a 
                       href={project.githubUrl}
-                      className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 text-sm px-4 py-2 rounded-md hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-colors"
+                      className="inline-flex items-center gap-2 border border-gray-600/30 text-[#D1D5DB] text-sm px-4 py-2 rounded-md hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-colors"
                     >
                       <Github size={16} />
                       Code
@@ -273,7 +273,7 @@ export default function PortfolioPage() {
       {/* All Projects */}
       <section className="py-8 md:py-12" ref={ref}>
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className={`text-2xl font-bold text-[#0f172a] mb-8 ${isVisible ? 'animate-fade-in-up' : ''}`}>
+          <h2 className={`text-2xl font-bold text-[#F9FAFB] mb-8 ${isVisible ? 'animate-fade-in-up' : ''}`}>
             All Projects
           </h2>
           
@@ -285,8 +285,8 @@ export default function PortfolioPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-[#0f2454] text-white shadow-md'
-                    : 'bg-gray-100 text-gray-700 hover:bg-[#2563EB] hover:text-white'
+                    ? 'bg-[#2563EB] text-white shadow-md'
+                    : 'bg-[#374151] text-[#D1D5DB] hover:bg-[#2563EB] hover:text-white'
                 }`}
               >
                 {category}
@@ -299,32 +299,32 @@ export default function PortfolioPage() {
             {filteredProjects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-500 hover:scale-105 ${isVisible ? 'animate-fade-in-up' : ''}`}
+                className={`group bg-[#1F2937] rounded-xl shadow-sm border border-gray-600/30 overflow-hidden hover:shadow-lg hover:border-[#2563EB]/50 transition-all duration-500 hover:scale-105 ${isVisible ? 'animate-fade-in-up' : ''}`}
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <div className="relative h-40 bg-gray-50 overflow-hidden">
+                <div className="relative h-40 bg-[#374151] overflow-hidden">
                   <Image 
                     src={project.image} 
                     alt={project.title}
                     fill 
-                    className="object-contain p-6 transition-transform duration-500 group-hover:scale-110" 
+                    className="object-contain p-6 transition-transform duration-500 group-hover:scale-110 filter brightness-0 invert opacity-70 group-hover:opacity-100" 
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="bg-[#0f2454] text-white text-xs px-2 py-1 rounded-full">
+                    <span className="bg-[#2563EB] text-white text-xs px-2 py-1 rounded-full">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-[#0f172a] mb-2 group-hover:text-[#2563EB] transition-colors">
+                  <h3 className="text-lg font-semibold text-[#F9FAFB] mb-2 group-hover:text-[#2563EB] transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-3">
+                  <p className="text-[#D1D5DB] text-sm mb-3">
                     {project.description.slice(0, 120)}...
                   </p>
                   
-                  <div className="flex items-center gap-2 text-sm text-[#0f2454] font-medium mb-3">
+                  <div className="flex items-center gap-2 text-sm text-[#2563EB] font-medium mb-3">
                     <TrendingUp size={14} />
                     {project.metrics.impact}
                   </div>
@@ -332,13 +332,13 @@ export default function PortfolioPage() {
                   <div className="flex gap-2">
                     <a 
                       href={project.demoUrl}
-                      className="flex-1 text-center bg-[#0f2454] text-white text-sm px-3 py-2 rounded-md hover:bg-[#2563EB] transition-colors"
+                      className="flex-1 text-center bg-[#2563EB] text-white text-sm px-3 py-2 rounded-md hover:bg-blue-600 transition-colors"
                     >
                       View Details
                     </a>
                     <a 
                       href={project.githubUrl}
-                      className="p-2 border border-gray-300 text-gray-700 rounded-md hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-colors"
+                      className="p-2 border border-gray-600/30 text-[#D1D5DB] rounded-md hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-colors"
                     >
                       <Github size={16} />
                     </a>
@@ -351,25 +351,25 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-white/70 backdrop-blur">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-[#2563EB]/10 to-[#3b82f6]/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-[#0f172a] mb-4 animate-fade-in-up">
+          <h2 className="text-3xl font-bold text-[#F9FAFB] mb-4 animate-fade-in-up">
             Ready to Transform Your Data?
           </h2>
-          <p className="text-gray-600 mb-8 animate-fade-in-up delay-100">
+          <p className="text-[#D1D5DB] mb-8 animate-fade-in-up delay-100">
             Let&apos;s discuss how data analytics can drive your business forward. 
             I&apos;d love to hear about your challenges and explore solutions together.
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
             <Link 
               href="/#contact"
-              className="btn-primary-gradient btn-animated text-white font-semibold px-8 py-3 rounded-md hover:scale-105 hover:-translate-y-1 shadow-lg"
+              className="bg-[#2563EB] text-white font-semibold px-8 py-3 rounded-md hover:bg-blue-600 hover:scale-105 hover:-translate-y-1 shadow-lg transition-all duration-300"
             >
               Start a Project
             </Link>
             <Link 
               href="/#about"
-              className="border border-[#0f2454] text-[#0f2454] font-semibold px-8 py-3 rounded-md hover:bg-[#2563EB] hover:border-[#2563EB] hover:text-white transition-all duration-300 hover:scale-105"
+              className="border border-[#2563EB] text-[#2563EB] font-semibold px-8 py-3 rounded-md hover:bg-[#2563EB] hover:border-[#2563EB] hover:text-white transition-all duration-300 hover:scale-105"
             >
               Learn More About Me
             </Link>
