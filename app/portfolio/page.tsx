@@ -161,38 +161,39 @@ export default function PortfolioPage() {
 
   return (
     <main className="min-h-screen pt-24 md:pt-28">
-      {/* Header */}
-      <section className="py-8 md:py-12">
+      {/* Premium Header */}
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
           <Link 
             href="/#portfolio" 
-            className="inline-flex items-center gap-2 text-[#D1D5DB] hover:text-[#2563EB] transition-colors mb-8 group"
+            className="inline-flex items-center gap-2 text-[#94A3B8] hover:text-[#3B82F6] hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition-all duration-300 mb-10 group font-medium"
           >
             <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
-            <span>Back to Home</span>
+            <span>Return to Portfolio</span>
           </Link>
           
-          <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#F9FAFB] mb-4">
-              Data Analytics Portfolio
+          <div className="animate-fade-in-up text-center">
+            <h1 className="font-poppins text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#E2E8F0] mb-6">
+              Premium <span className="text-gradient-premium">Portfolio</span>
             </h1>
-            <p className="text-lg text-[#D1D5DB] max-w-3xl">
-              Explore my comprehensive collection of data analysis projects, from business intelligence dashboards 
-              to machine learning models, each delivering measurable business impact.
+            <p className="font-inter text-lg md:text-xl text-[#94A3B8] max-w-4xl mx-auto leading-relaxed font-medium">
+              Discover my elite collection of data analytics transformations, from strategic business intelligence
+              to advanced machine learning solutions, each delivering exceptional ROI and competitive advantage.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="py-8 md:py-12 bg-gradient-to-r from-[#2563EB]/10 to-[#3b82f6]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[#F9FAFB] mb-8 animate-fade-in-up">Featured Projects</h2>
+      {/* Premium Featured Projects */}
+      <section className="py-12 md:py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/10 via-transparent to-[#3B82F6]/5"></div>
+        <div className="relative max-w-7xl mx-auto px-6">
+          <h2 className="font-poppins text-3xl md:text-4xl font-bold text-[#E2E8F0] mb-12 animate-fade-in-up text-center">Elite Featured Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`group bg-[#1F2937] rounded-2xl shadow-lg border border-gray-600/30 overflow-hidden hover:shadow-xl hover:border-[#2563EB]/50 transition-all duration-500 hover:scale-105 animate-fade-in-up`}
+                className={`group glass-card rounded-3xl shadow-premium hover:shadow-premium-hover ring-2 ring-[#3B82F6]/20 hover:ring-[#3B82F6]/40 overflow-hidden transition-all duration-500 hover:scale-[1.02] animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative h-48 bg-[#374151] overflow-hidden">
