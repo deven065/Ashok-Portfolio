@@ -14,7 +14,7 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 glass-surface text-[#3B82F6] px-6 py-3 rounded-full font-medium text-sm shadow-premium animate-fade-in-up border border-[#3B82F6]/30">
               <span>✨</span>
-              <span>Premium Data Analytics</span>
+              <span>Hi, I'm Ashok Choudhary</span>
             </div>
 
             {/* Heading */}

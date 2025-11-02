@@ -37,7 +37,7 @@ export default function AboutSection() {
         <div className={`${isVisible ? 'animate-fade-in-right delay-200' : ''}`}>
           <div className={`${isVisible ? 'animate-fade-in-up' : ''}`}>
             <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#E2E8F0]">
-              About <span className="text-gradient-premium">Excellence</span>
+              About <span className="text-gradient-premium">Me</span>
             </h2>
             <div className="mt-4 h-2 w-20 rounded-full bg-gradient-to-r from-[#3B82F6] via-[#1E3A8A] to-[#FACC15]">
               <div className={`h-full w-10 rounded-full bg-[#FACC15] transition-all duration-1000 ${isVisible ? 'animate-fade-in delay-300' : ''}`} />
