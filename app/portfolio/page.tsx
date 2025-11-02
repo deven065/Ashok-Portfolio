@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, startTransition } from "react";
 import { ArrowLeft, Github, BarChart3, TrendingUp, Users, Calendar, Eye } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
@@ -155,10 +155,10 @@ export default function PortfolioPage() {
   const [isMounted, setIsMounted] = useState(false);
 
   // Set mounted state to prevent hydration mismatches
-  // This pattern is necessary for SSR hydration safety
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useLayoutEffect(() => {
-    setIsMounted(true);
+    startTransition(() => {
+      setIsMounted(true);
+    });
   }, []);
 
   const filteredProjects = selectedCategory === "All" 
