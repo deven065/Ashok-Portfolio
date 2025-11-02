@@ -58,7 +58,7 @@ export default function Home() {
               <div className="relative w-full h-80 xs:h-[380px] sm:h-[420px] md:h-[440px]">
                 <Image
                   src="/about.jpeg"
-                  alt="Ashok — Premium Data Analyst"
+                  alt="Ashok Choudhary - Data Analyst"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                   priority
