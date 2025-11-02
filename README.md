@@ -221,6 +221,29 @@ Vercel provides seamless deployment with:
 - Edge network optimization
 - SSL certificates included
 
+### GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+#### Setup Instructions
+
+1. **Enable GitHub Pages** in your repository:
+   - Go to Settings → Pages
+   - Under "Build and deployment", select **GitHub Actions** as the source
+
+2. **Push to main branch**:
+   - The workflow will automatically trigger on push to `main`
+   - Build artifacts will be deployed to GitHub Pages
+
+3. **Access your site**:
+   - Your portfolio will be available at: `https://[username].github.io/[repository-name]`
+   - For this repository: `https://deven065.github.io/Ashok-Portfolio.github.io/`
+
+The GitHub Actions workflow (`.github/workflows/deploy.yml`) handles:
+- Installing dependencies
+- Building the Next.js static export
+- Deploying to GitHub Pages automatically
+
 ### Alternative Deployment Options
 
 #### Build for Production
@@ -229,12 +252,14 @@ Vercel provides seamless deployment with:
 npm run build
 ```
 
+The static files will be generated in the `out/` directory.
+
 #### Deploy to Different Platforms
 
 - **Netlify**: Connect GitHub repository or drag-and-drop the `out` folder
 - **AWS Amplify**: Connect repository for automatic deployments
 - **DigitalOcean App Platform**: One-click deployment with GitHub integration
-- **Custom Server**: Run `npm start` after building
+- **Custom Server**: Serve the `out/` folder with any static hosting service
 
 ### Environment Configuration
 
