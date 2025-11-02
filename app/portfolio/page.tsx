@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, Github, BarChart3, TrendingUp, Users, Calendar, Eye } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
@@ -152,6 +152,12 @@ const categories = ["All", "Business Intelligence", "Machine Learning", "Operati
 export default function PortfolioPage() {
   const [ref, isVisible] = useIntersectionObserver();
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Set mounted state to prevent hydration mismatches
+    setIsMounted(true);
+  }, []);
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
@@ -274,12 +280,12 @@ export default function PortfolioPage() {
       {/* All Projects */}
       <section className="py-8 md:py-12" ref={ref}>
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className={`text-2xl font-bold text-[#F9FAFB] mb-8 ${isVisible ? 'animate-fade-in-up' : ''}`}>
+          <h2 className={`text-2xl font-bold text-[#F9FAFB] mb-8 ${isMounted && isVisible ? 'animate-fade-in-up' : ''}`}>
             All Projects
           </h2>
           
           {/* Category Filter */}
-          <div className={`flex flex-wrap gap-3 mb-8 ${isVisible ? 'animate-fade-in-up delay-100' : ''}`}>
+          <div className={`flex flex-wrap gap-3 mb-8 ${isMounted && isVisible ? 'animate-fade-in-up delay-100' : ''}`}>
             {categories.map((category) => (
               <button
                 key={category}
@@ -300,7 +306,7 @@ export default function PortfolioPage() {
             {filteredProjects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`group bg-[#1F2937] rounded-xl shadow-sm border border-gray-600/30 overflow-hidden hover:shadow-lg hover:border-[#2563EB]/50 transition-all duration-500 hover:scale-105 ${isVisible ? 'animate-fade-in-up' : ''}`}
+                className={`group bg-[#1F2937] rounded-xl shadow-sm border border-gray-600/30 overflow-hidden hover:shadow-lg hover:border-[#2563EB]/50 transition-all duration-500 hover:scale-105 ${isMounted && isVisible ? 'animate-fade-in-up' : ''}`}
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
                 <div className="relative h-40 bg-[#374151] overflow-hidden">

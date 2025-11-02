@@ -5,9 +5,16 @@ import { useEffect, useRef, useState } from "react";
 export function useIntersectionObserver(options = {}) {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
     const element = ref.current;
     if (!element) return;
 
@@ -28,7 +35,7 @@ export function useIntersectionObserver(options = {}) {
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [hasAnimated, options]);
+  }, [isMounted, hasAnimated, options]);
 
   return [ref, isIntersecting] as const;
 }
