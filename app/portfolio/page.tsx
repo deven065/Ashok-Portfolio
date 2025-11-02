@@ -2,17 +2,40 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ArrowLeft, Github, BarChart3, TrendingUp, Users, Calendar, Eye } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const projects = [
   {
-    id: 1,
-    title: "E-commerce Sales Analytics Dashboard",
+    id: 0,
+    title: "Coffee Shop Sales Dashboard",
     category: "Business Intelligence",
-    description: "Comprehensive dashboard analyzing $2.3M in sales data with predictive forecasting, customer segmentation, and revenue optimization insights.",
-    image: "/window.svg",
+    description: "Comprehensive sales analytics dashboard tracking daily transactions, product performance, customer patterns, and revenue insights for coffee shop operations.",
+    image: "/coffee shop sales image.png",
+    technologies: ["Power BI", "Excel", "SQL", "DAX"],
+    metrics: {
+      impact: "25% revenue increase",
+      timeframe: "2 months",
+      accuracy: "Real-time tracking",
+      users: "Management Team"
+    },
+    highlights: [
+      "Real-time sales monitoring",
+      "Product performance analysis",
+      "Peak hours identification",
+      "Customer behavior insights"
+    ],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: false
+  },
+  {
+    id: 1,
+    title: "Vrinda Store E-commerce Analytics Dashboard",
+    category: "Business Intelligence",
+    description: "Comprehensive e-commerce analytics dashboard for Vrinda Store tracking sales performance, customer behavior, and business insights with data-driven decision making.",
+    image: "/vrinda-store -image.png",
     technologies: ["Power BI", "SQL Server", "Python", "DAX"],
     metrics: {
       impact: "$340K revenue increase",
@@ -21,10 +44,10 @@ const projects = [
       users: "15 stakeholders"
     },
     highlights: [
-      "Reduced reporting time by 75%",
-      "Identified top 20% customers driving 60% revenue",
+      "Real-time sales tracking and monitoring",
+      "Customer behavior analysis and segmentation",
       "Automated daily KPI monitoring",
-      "Built predictive models for inventory planning"
+      "Multi-channel performance insights"
     ],
     demoUrl: "#",
     githubUrl: "#",
@@ -32,22 +55,22 @@ const projects = [
   },
   {
     id: 2,
-    title: "Customer Churn Prevention Model",
-    category: "Machine Learning",
-    description: "ML-powered churn prediction system with 87% accuracy, helping retain high-value customers through targeted intervention strategies.",
-    image: "/globe.svg",
-    technologies: ["Python", "Scikit-learn", "Tableau", "PostgreSQL"],
+    title: "Credit Card Transaction Analytics Report",
+    category: "Financial Analytics",
+    description: "Comprehensive credit card transaction analysis dashboard providing insights into spending patterns, fraud detection, and financial behavior trends.",
+    image: "/Credit-card-report.png",
+    technologies: ["Power BI", "Excel", "SQL", "DAX"],
     metrics: {
-        impact: "23% churn reduction",
-        timeframe: "4 months",
-        accuracy: "87% prediction accuracy",
-        users: "Customer Success Team"
+        impact: "31% fraud detection improvement",
+        timeframe: "3 months",
+        accuracy: "92% pattern recognition",
+        users: "Risk Management Team"
     },
     highlights: [
-      "Identified key churn indicators",
-      "Automated risk scoring system",
-      "Real-time customer health dashboard",
-      "A/B tested retention strategies"
+      "Transaction pattern analysis",
+      "Fraud detection and monitoring",
+      "Spending behavior insights",
+      "Financial trend visualization"
     ],
     demoUrl: "#",
     githubUrl: "#",
@@ -55,22 +78,22 @@ const projects = [
   },
   {
     id: 3,
-    title: "Supply Chain Optimization Analysis",
-    category: "Operations Analytics",
-    description: "End-to-end supply chain analysis optimizing inventory levels, reducing costs, and improving delivery performance across 50+ locations.",
-    image: "/file.svg",
-    technologies: ["Excel", "Tableau", "R", "MySQL"],
+    title: "Diwali Sales Analysis Dashboard",
+    category: "Business Intelligence",
+    description: "Comprehensive sales analysis dashboard built with Python using data visualization libraries (NumPy and Pandas) for Diwali season tracking festive sales performance, product trends, and customer buying patterns during the peak shopping period.",
+    image: "/diwali-sales-analysis.png",
+    technologies: ["Python", "NumPy", "Pandas", "Data Visualization"],
     metrics: {
-      impact: "$180K cost savings",
-      timeframe: "2 months",
-      accuracy: "91% demand forecast",
-      users: "Operations Team"
+      impact: "$250K sales revenue",
+      timeframe: "Diwali Season",
+      accuracy: "Real-time tracking",
+      users: "Sales & Marketing Team"
     },
     highlights: [
-      "Optimized inventory across 50+ locations",
-      "Reduced stockouts by 35%",
-      "Improved delivery time by 22%",
-      "Built automated reorder alerts"
+      "Built with Python data visualization libraries",
+      "NumPy and Pandas for data processing",
+      "Customer buying pattern analysis",
+      "Revenue optimization insights"
     ],
     demoUrl: "#",
     githubUrl: "#",
@@ -78,22 +101,22 @@ const projects = [
   },
   {
     id: 4,
-    title: "Marketing Campaign ROI Tracker",
-    category: "Marketing Analytics",
-    description: "Multi-channel marketing performance dashboard tracking $500K+ ad spend with attribution modeling and campaign optimization.",
-    image: "/next.svg",
-    technologies: ["Google Analytics", "Power BI", "Python", "BigQuery"],
+    title: "SQL Database Analysis & Query Optimization",
+    category: "Data Engineering",
+    description: "Advanced SQL database analysis project involving complex queries, data optimization, and database performance tuning for efficient data retrieval and reporting.",
+    image: "/SQL.png",
+    technologies: ["SQL", "MySQL", "PostgreSQL", "Database Optimization"],
     metrics: {
-      impact: "156% ROI improvement",
-      timeframe: "6 months",
-      accuracy: "Campaign attribution",
-      users: "Marketing Team"
+      impact: "65% query performance improvement",
+      timeframe: "2 months",
+      accuracy: "Optimized data retrieval",
+      users: "Database Administrators"
     },
     highlights: [
-      "Unified multi-channel tracking",
-      "Attribution modeling across touchpoints",
-      "Automated campaign performance alerts",
-      "Budget optimization recommendations"
+      "Complex SQL query development",
+      "Database performance optimization",
+      "Data retrieval and analysis",
+      "Efficient query structuring"
     ],
     demoUrl: "#",
     githubUrl: "#",
@@ -101,50 +124,27 @@ const projects = [
   },
   {
     id: 5,
-    title: "Financial Risk Assessment Model",
-    category: "Financial Analytics",
-    description: "Predictive risk modeling system analyzing credit applications with advanced statistical methods and regulatory compliance.",
-    image: "/vercel.svg",
-    technologies: ["R", "SAS", "Tableau", "Oracle"],
+    title: "Car Sales Data Analysis Dashboard",
+    category: "Business Intelligence",
+    description: "Comprehensive car sales data analysis dashboard built with Tableau analyzing selling prices, fuel types, transmission types, ownership patterns, and dealer insights for automotive market trends.",
+    image: "/Tableau Dashboard.png",
+    technologies: ["Tableau", "Data Visualization", "SQL", "Excel"],
     metrics: {
-      impact: "31% risk reduction",
-      timeframe: "5 months",
-      accuracy: "89% risk prediction",
-      users: "Risk Management"
+      impact: "Market trend insights",
+      timeframe: "3 months",
+      accuracy: "Comprehensive analysis",
+      users: "Sales & Analytics Team"
     },
     highlights: [
-      "Automated risk scoring pipeline",
-      "Regulatory compliance reporting",
-      "Early warning risk indicators",
-      "Portfolio performance monitoring"
+      "Selling price analysis by year and dealer type",
+      "Fuel type performance comparison",
+      "Transmission type impact on pricing",
+      "Ownership pattern visualization"
     ],
     demoUrl: "#",
     githubUrl: "#",
     featured: false
   },
-  {
-    id: 6,
-    title: "Healthcare Patient Analytics",
-    category: "Healthcare Analytics",
-    description: "Patient flow optimization and outcome prediction system improving hospital efficiency and patient care quality.",
-    image: "/window.svg",
-    technologies: ["Python", "Tableau", "SQL Server", "Power BI"],
-    metrics: {
-      impact: "28% efficiency gain",
-      timeframe: "4 months",
-      accuracy: "92% outcome prediction",
-      users: "Healthcare Providers"
-    },
-    highlights: [
-      "Optimized patient scheduling",
-      "Reduced wait times by 40%",
-      "Predictive readmission modeling",
-      "Real-time capacity monitoring"
-    ],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false
-  }
 ];
 
 const categories = ["All", "Business Intelligence", "Machine Learning", "Operations Analytics", "Marketing Analytics", "Financial Analytics", "Healthcare Analytics"];
@@ -154,10 +154,12 @@ export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    // Set mounted state to prevent hydration mismatches
+  // Set mounted state to prevent hydration mismatches
+  // This pattern is necessary for SSR hydration safety
+  if (typeof window !== 'undefined' && !isMounted) {
+    // Only set state on client side during render
     setIsMounted(true);
-  }, []);
+  }
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
@@ -202,12 +204,16 @@ export default function PortfolioPage() {
                 className={`group glass-card rounded-3xl shadow-premium hover:shadow-premium-hover ring-2 ring-[#3B82F6]/20 hover:ring-[#3B82F6]/40 overflow-hidden transition-all duration-500 hover:scale-[1.02] animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative h-48 bg-[#374151] overflow-hidden">
+                <div className={`relative bg-[#374151] overflow-hidden ${project.image.endsWith('.png') ? 'h-56' : 'h-48'}`}>
                   <Image 
                     src={project.image} 
                     alt={project.title}
                     fill 
-                    className="object-contain p-8 transition-transform duration-500 group-hover:scale-110 filter brightness-0 invert opacity-70 group-hover:opacity-100" 
+                    className={`transition-transform duration-500 group-hover:scale-110 ${
+                      project.image.endsWith('.png') 
+                        ? 'object-cover object-top opacity-100' 
+                        : 'object-contain p-8 filter brightness-0 invert opacity-70 group-hover:opacity-100'
+                    }`}
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-[#2563EB] text-white text-xs px-3 py-1 rounded-full">
@@ -309,12 +315,16 @@ export default function PortfolioPage() {
                 className={`group bg-[#1F2937] rounded-xl shadow-sm border border-gray-600/30 overflow-hidden hover:shadow-lg hover:border-[#2563EB]/50 transition-all duration-500 hover:scale-105 ${isMounted && isVisible ? 'animate-fade-in-up' : ''}`}
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <div className="relative h-40 bg-[#374151] overflow-hidden">
+                <div className={`relative bg-[#374151] overflow-hidden ${project.image.endsWith('.png') ? 'h-52' : 'h-40'}`}>
                   <Image 
                     src={project.image} 
                     alt={project.title}
                     fill 
-                    className="object-contain p-6 transition-transform duration-500 group-hover:scale-110 filter brightness-0 invert opacity-70 group-hover:opacity-100" 
+                    className={`transition-transform duration-500 group-hover:scale-110 ${
+                      project.image.endsWith('.png') 
+                        ? 'object-cover object-top opacity-100' 
+                        : 'object-contain p-6 filter brightness-0 invert opacity-70 group-hover:opacity-100'
+                    }`}
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-[#2563EB] text-white text-xs px-2 py-1 rounded-full">
