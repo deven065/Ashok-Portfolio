@@ -194,7 +194,7 @@ export default function PortfolioPage() {
 
       {/* Premium Featured Projects */}
       <section className="py-12 md:py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/10 via-transparent to-[#3B82F6]/5"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-[#1E3A8A]/10 via-transparent to-[#3B82F6]/5"></div>
         <div className="relative max-w-7xl mx-auto px-6">
           <h2 className="font-poppins text-3xl md:text-4xl font-bold text-[#E2E8F0] mb-12 animate-fade-in-up text-center">Elite Featured Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -368,7 +368,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-[#2563EB]/10 to-[#3b82f6]/10">
+      <section className="py-12 md:py-16 bg-linear-to-r from-[#2563EB]/10 to-[#3b82f6]/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-[#F9FAFB] mb-4 animate-fade-in-up">
             Ready to Transform Your Data?

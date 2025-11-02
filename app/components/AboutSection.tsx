@@ -22,20 +22,22 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-16 md:py-24" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
         {/* Left: Premium Image card */}
         <div className={`relative ${isMounted && isVisible ? 'animate-fade-in-left' : ''}`}>
-          <div className="absolute -inset-8 -z-10 rounded-[32px] bg-gradient-to-br from-[#3B82F6]/20 via-[#1E3A8A]/10 to-[#FACC15]/5 blur-3xl" />
-          <div className="relative glass-card rounded-[32px] overflow-hidden shadow-premium ring-2 ring-[#3B82F6]/20 hover:shadow-premium-hover hover:ring-[#3B82F6]/40 transition-all duration-500 hover:scale-[1.02]">
-            <div className="relative aspect-4/3">
+          <div className="absolute -inset-16 -z-10 rounded-[48px] bg-gradient-to-br from-[#3B82F6]/30 via-[#1E3A8A]/15 to-[#FACC15]/8 blur-3xl opacity-80" />
+          <div className="relative glass-card rounded-[48px] overflow-hidden shadow-premium ring-2 ring-[#3B82F6]/30 hover:shadow-premium-hover hover:ring-[#3B82F6]/50 transition-all duration-500 hover:scale-[1.02]">
+            <div className="relative w-full max-w-2xl mx-auto" style={{ aspectRatio: '3/4' }}>
               <Image
-                src="/about.jpeg"
-                alt="Premium data analytics workspace"
+                src="/Ashok.jpg"
+                alt="Ashok Choudhary - Premium Data Analyst"
                 fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/40 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/50 via-transparent to-transparent"></div>
             </div>
           </div>
         </div>
