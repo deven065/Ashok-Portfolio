@@ -30,6 +30,11 @@ The workflow automatically triggers when:
 
 Once deployed, your portfolio will be available at:
 ```
+https://[username].github.io/[repository-name]/
+```
+
+For example, this repository will be available at:
+```
 https://deven065.github.io/Ashok-Portfolio.github.io/
 ```
 
