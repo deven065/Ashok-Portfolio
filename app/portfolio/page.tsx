@@ -147,8 +147,6 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Business Intelligence", "Machine Learning", "Operations Analytics", "Marketing Analytics", "Financial Analytics", "Healthcare Analytics"];
-
 export default function PortfolioPage() {
   const [ref, isVisible] = useIntersectionObserver();
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -160,6 +158,9 @@ export default function PortfolioPage() {
       setIsMounted(true);
     });
   }, []);
+
+  // Dynamically generate categories from projects that actually exist
+  const availableCategories = ["All", ...new Set(projects.map(project => project.category))];
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
@@ -296,7 +297,7 @@ export default function PortfolioPage() {
           
           {/* Category Filter */}
           <div className={`flex flex-wrap gap-3 mb-8 ${isMounted && isVisible ? 'animate-fade-in-up delay-100' : ''}`}>
-            {categories.map((category) => (
+            {availableCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
