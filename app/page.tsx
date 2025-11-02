@@ -14,7 +14,7 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 glass-surface text-[#3B82F6] px-6 py-3 rounded-full font-medium text-sm shadow-premium animate-fade-in-up border border-[#3B82F6]/30">
               <span>✨</span>
-              <span>Hi, I'm Ashok Choudhary</span>
+              <span>Welcome, I'm Ashok Choudhary</span>
             </div>
 
             {/* Heading */}
@@ -28,10 +28,10 @@ export default function Home() {
 
             {/* Paragraph */}
             <p className="font-inter text-sm sm:text-base md:text-lg text-[#94A3B8] max-w-xl leading-relaxed animate-fade-in-up delay-400 font-medium">
-              Aspiring Data Analyst passionate about transforming data into
-              actionable business insights. With skills in data analysis,
-              visualization, and statistical modeling, I create dashboards
-              that help businesses make data-driven decisions.
+              E-Commerce Executive and Data Analyst with expertise in transforming data into
+              actionable business insights. I specialize in data analysis,
+              visualization, and dashboard development, creating solutions
+              that enable organizations to make informed, data-driven decisions.
             </p>
 
             {/* Buttons */}
@@ -46,7 +46,7 @@ export default function Home() {
                 href="#contact"
                 className="btn-premium-outline font-semibold px-8 sm:px-10 py-4 rounded-xl text-center xs:text-left text-sm sm:text-base transition-all duration-300"
               >
-                Schedule Consultation
+                Get in Touch
               </Link>
             </div>
           </div>
@@ -202,16 +202,16 @@ export default function Home() {
           <div className="mt-6 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {[
               {
-                role: "Data Analyst",
-                org: "Current Organization",
-                time: "2023 — Present",
-                text: "Creating data visualizations and dashboards, analyzing business metrics, and generating insights to support decision-making processes.",
+                role: "E-Commerce Executive",
+                org: "Renaissance Global Limited",
+                time: "Mar 2025 — Present",
+                text: "Managing daily e-commerce operations and order fulfillment. Built Python-based invoice extractor reducing manual work by ~80%. Developed and published interactive Power BI dashboards on Microsoft Fabric with automated refresh for real-time business insights.",
               },
               {
-                role: "Data Analytics Intern",
-                org: "Previous Experience",
-                time: "2022 — 2023",
-                text: "Assisted in data collection and cleaning, created basic reports and visualizations, and supported analytics projects.",
+                role: "Operations Analyst",
+                org: "Mataji Cement Depo (Shree Cement)",
+                time: "Aug 2021 — Dec 2022",
+                text: "Utilized advanced Excel functions for financial analysis and reporting. Generated monthly financial reports using pivot tables and visualizations. Conducted variance analysis and streamlined processes to improve transaction management efficiency.",
               },
             ].map((e, index) => (
               <div key={e.role} className={`rounded-xl border border-gray-600/30 bg-[#1F2937] p-5 shadow-sm hover:shadow-lg hover:scale-105 hover:border-[#2563EB]/50 transition-all duration-500 animate-fade-in-up`} style={{ animationDelay: `${0.1 + index * 0.1}s` }}>
@@ -234,9 +234,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/10 via-transparent to-[#3B82F6]/5"></div>
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 items-start lg:items-center">
           <div className="lg:col-span-2">
-            <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-[#E2E8F0] animate-fade-in-up">Ready to Work Together?</h2>
+              <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-[#E2E8F0] animate-fade-in-up">Ready to Work Together?</h2>
             <p className="font-inter text-base sm:text-lg text-[#94A3B8] mt-4 animate-fade-in-up delay-100 leading-relaxed">
-              Let's collaborate on data analysis projects. I'm eager to help transform your data into meaningful insights and actionable visualizations.
+              Let's collaborate on your data analysis projects. I help organizations transform their data into meaningful insights, interactive dashboards, and actionable visualizations that drive business decisions.
             </p>
             <div className="mt-8 flex flex-col xs:flex-row flex-wrap gap-4 animate-fade-in-up delay-200">
               <a
@@ -244,7 +244,7 @@ export default function Home() {
                 className="btn-premium inline-flex items-center justify-center xs:justify-start gap-3 px-8 py-4 rounded-xl shadow-premium hover:shadow-premium-hover text-white font-semibold group text-sm sm:text-base"
               >
                 <Mail size={20} className="transition-transform duration-300 group-hover:rotate-12" /> 
-                <span>Start Premium Project</span>
+                <span>Start a Project</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/ashokchoudhary13/"

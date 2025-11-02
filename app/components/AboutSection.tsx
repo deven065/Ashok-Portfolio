@@ -56,15 +56,15 @@ export default function AboutSection() {
           <div className={`mt-6 sm:mt-8 space-y-5 sm:space-y-6 font-inter text-base sm:text-lg md:text-xl leading-7 sm:leading-8 md:leading-9 text-[#94A3B8] ${isMounted && isVisible ? 'animate-fade-in-up delay-200' : ''}`}>
             <p className="font-medium">
               With 1+ years of hands-on experience in data analysis and business intelligence,
-              I'm passionate about transforming raw data into meaningful insights. I work with
-              organizations to analyze their data, create visualizations, and build dashboards
-              that support informed decision-making.
+              I specialize in transforming raw data into meaningful insights. I collaborate with
+              organizations to analyze their data, create compelling visualizations, and build dashboards
+              that support informed, data-driven decision-making.
             </p>
             <p className="font-medium">
-              I focus on data cleaning, exploratory data analysis, dashboard development, and
-              creating clear visualizations that tell a story. While I'm building my expertise,
-              I bring enthusiasm, attention to detail, and a commitment to learning and growing
-              in the field of data analytics.
+              My expertise encompasses data cleaning, exploratory data analysis, dashboard development, and
+              creating clear visualizations that effectively communicate insights. I bring a combination of
+              technical proficiency, attention to detail, and a commitment to delivering high-quality analytics solutions
+              that drive business value.
             </p>
           </div>
 

@@ -182,11 +182,12 @@ export default function PortfolioPage() {
           
           <div className="animate-fade-in-up text-center">
             <h1 className="font-poppins text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#E2E8F0] mb-6">
-              Premium <span className="text-gradient-premium">Portfolio</span>
+              My <span className="text-gradient-premium">Portfolio</span>
             </h1>
             <p className="font-inter text-lg md:text-xl text-[#94A3B8] max-w-4xl mx-auto leading-relaxed font-medium">
-              Discover my elite collection of data analytics transformations, from strategic business intelligence
-              to advanced machine learning solutions, each delivering exceptional ROI and competitive advantage.
+              A collection of data analytics projects showcasing business intelligence solutions,
+              interactive dashboards, and data-driven insights that deliver measurable business value
+              and support strategic decision-making.
             </p>
           </div>
         </div>
@@ -196,7 +197,7 @@ export default function PortfolioPage() {
       <section className="py-12 md:py-20 relative">
         <div className="absolute inset-0 bg-linear-to-br from-[#1E3A8A]/10 via-transparent to-[#3B82F6]/5"></div>
         <div className="relative max-w-7xl mx-auto px-6">
-          <h2 className="font-poppins text-3xl md:text-4xl font-bold text-[#E2E8F0] mb-12 animate-fade-in-up text-center">Elite Featured Projects</h2>
+          <h2 className="font-poppins text-3xl md:text-4xl font-bold text-[#E2E8F0] mb-12 animate-fade-in-up text-center">Featured Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <div 
