@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BarChart3, PieChart, Database, Brain, Mail, Linkedin } from "lucide-react";
+import { BarChart3, PieChart, Database, Brain, Mail, Linkedin, Download } from "lucide-react";
 import AboutSection from "./components/AboutSection";
 
 export default function Home() {
@@ -28,19 +28,19 @@ export default function Home() {
 
             {/* Paragraph */}
             <p className="font-inter text-sm sm:text-base md:text-lg text-[#94A3B8] max-w-xl leading-relaxed animate-fade-in-up delay-400 font-medium">
-              Elite Data Analyst specializing in transforming complex datasets into
-              strategic business intelligence. With expertise in advanced analytics,
-              premium visualizations, and statistical modeling, I deliver insights
-              that drive exceptional business growth.
+              Aspiring Data Analyst passionate about transforming data into
+              actionable business insights. With skills in data analysis,
+              visualization, and statistical modeling, I create dashboards
+              that help businesses make data-driven decisions.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col xs:flex-row flex-wrap gap-4 sm:gap-5 pt-4 animate-fade-in-up delay-500">
-              <Link
+                <Link
                 href="#portfolio"
                 className="btn-premium font-semibold px-8 sm:px-10 py-4 rounded-xl shadow-premium hover:shadow-premium-hover text-white text-center xs:text-left text-sm sm:text-base transition-all duration-300"
               >
-                View Premium Work →
+                View My Work →
               </Link>
               <Link
                 href="#contact"
@@ -70,20 +70,20 @@ export default function Home() {
               {/* PREMIUM STATS GRID */}
               <div className="grid grid-cols-2">
                 <div className="glass-surface text-center py-4 sm:py-5 hover:bg-[#3B82F6]/20 transition-all duration-300 group">
-                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">50+</p>
-                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Elite Projects</p>
+                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">10+</p>
+                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Projects</p>
                 </div>
                 <div className="glass-surface text-center py-4 sm:py-5 hover:bg-[#3B82F6]/20 transition-all duration-300 group">
-                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">8+</p>
-                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Years Excellence</p>
+                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">1+</p>
+                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Years Experience</p>
                 </div>
                 <div className="glass-surface text-center py-4 sm:py-5 hover:bg-[#3B82F6]/20 transition-all duration-300 group">
                   <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">100%</p>
-                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Client Success</p>
+                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Commitment</p>
                 </div>
                 <div className="glass-surface text-center py-4 sm:py-5 hover:bg-[#3B82F6]/20 transition-all duration-300 group">
-                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">$2M+</p>
-                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">ROI Generated</p>
+                  <p className="text-lg sm:text-xl md:text-[22px] font-bold text-[#E2E8F0] group-hover:text-[#FACC15] transition-colors duration-300">5+</p>
+                  <p className="text-xs sm:text-sm text-[#94A3B8] font-medium">Tools Mastered</p>
                 </div>
               </div>
             </div>
@@ -98,23 +98,23 @@ export default function Home() {
       <section id="skills" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="font-poppins text-3xl md:text-4xl font-bold text-[#E2E8F0] animate-fade-in-up">Premium Expertise</h2>
-            <p className="font-inter text-base text-[#94A3B8] mt-4 animate-fade-in-up delay-100 max-w-2xl mx-auto">Delivering exceptional results through cutting-edge analytics and strategic insights</p>
+            <h2 className="font-poppins text-3xl md:text-4xl font-bold text-[#E2E8F0] animate-fade-in-up">Core Skills</h2>
+            <p className="font-inter text-base text-[#94A3B8] mt-4 animate-fade-in-up delay-100 max-w-2xl mx-auto">Building expertise in data analytics, visualization, and insights generation</p>
           </div>
           <div className="mt-8 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
-                title: "Strategic Analytics",
-                desc: "Advanced KPIs, cohort analysis, predictive forecasting.",
+                title: "Data Analysis",
+                desc: "Data cleaning, exploratory analysis, and KPI calculation.",
                 Icon: BarChart3,
               },
               {
-                title: "Premium Visualization",
-                desc: "Executive dashboards with crystal-clear insights.",
+                title: "Data Visualization",
+                desc: "Interactive dashboards and clear visualizations.",
                 Icon: PieChart,
               },
-              { title: "Data Engineering", desc: "Enterprise ETL, optimization, architecture.", Icon: Database },
-              { title: "AI & Experimentation", desc: "ML models, A/B testing, statistical analysis.", Icon: Brain },
+              { title: "SQL & Databases", desc: "Query writing, data extraction, and basic ETL.", Icon: Database },
+              { title: "Python Analytics", desc: "Data processing with NumPy, Pandas, and visualization libraries.", Icon: Brain },
             ].map(({ title, desc, Icon }, index) => (
               <div
                 key={title}
@@ -146,23 +146,42 @@ export default function Home() {
           </div>
           <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
-              { title: "Sales Performance Dashboard", img: "/window.svg" },
-              { title: "Customer Segmentation", img: "/globe.svg" },
-              { title: "Supply Chain Insights", img: "/file.svg" },
+              { 
+                title: "Coffee Shop Sales Dashboard", 
+                img: "/coffee shop sales image.png",
+                description: "Comprehensive sales analytics dashboard tracking daily transactions and revenue insights."
+              },
+              { 
+                title: "Vrinda Store E-commerce Analytics", 
+                img: "/vrinda-store -image.png",
+                description: "E-commerce analytics dashboard tracking sales performance and customer behavior."
+              },
+              { 
+                title: "Credit Card Transaction Analytics", 
+                img: "/Credit-card-report.png",
+                description: "Financial analytics dashboard providing insights into spending patterns and trends."
+              },
             ].map((p, index) => (
               <div
                 key={p.title}
                 className={`group rounded-xl border border-gray-600/30 bg-[#1F2937] overflow-hidden shadow-sm hover:shadow-xl hover:scale-105 hover:border-[#2563EB]/50 transition-all duration-500 animate-fade-in-up`}
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <div className="relative h-40 bg-[#374151] overflow-hidden">
-                  <Image src={p.img} alt="project cover" fill className="object-contain p-6 transition-transform duration-500 group-hover:scale-110 filter brightness-0 invert opacity-70 group-hover:opacity-100" />
+                <div className="relative h-48 bg-[#374151] overflow-hidden">
+                  <Image 
+                    src={p.img} 
+                    alt={p.title} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-100"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                  />
                 </div>
                 <div className="p-5">
                   <h3 className="font-semibold text-[#F9FAFB] group-hover:text-[#2563EB] transition-colors duration-300">
                     {p.title}
                   </h3>
-                  <p className="mt-1.5 text-sm text-[#D1D5DB]">Interactive visuals, clear KPIs, actionable insights.</p>
+                  <p className="mt-1.5 text-sm text-[#D1D5DB]">{p.description}</p>
                 </div>
               </div>
             ))}
@@ -183,16 +202,16 @@ export default function Home() {
           <div className="mt-6 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {[
               {
-                role: "Senior Data Analyst",
-                org: "Acme Corp",
-                time: "2021 — Present",
-                text: "Led analytics initiatives improving conversion by 12% via funnel optimization and experimentation.",
+                role: "Data Analyst",
+                org: "Current Organization",
+                time: "2023 — Present",
+                text: "Creating data visualizations and dashboards, analyzing business metrics, and generating insights to support decision-making processes.",
               },
               {
-                role: "Data Analyst",
-                org: "Globex",
-                time: "2018 — 2021",
-                text: "Built BI dashboards for ops and finance; reduced reporting time by 70%.",
+                role: "Data Analytics Intern",
+                org: "Previous Experience",
+                time: "2022 — 2023",
+                text: "Assisted in data collection and cleaning, created basic reports and visualizations, and supported analytics projects.",
               },
             ].map((e, index) => (
               <div key={e.role} className={`rounded-xl border border-gray-600/30 bg-[#1F2937] p-5 shadow-sm hover:shadow-lg hover:scale-105 hover:border-[#2563EB]/50 transition-all duration-500 animate-fade-in-up`} style={{ animationDelay: `${0.1 + index * 0.1}s` }}>
@@ -215,9 +234,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A8A]/10 via-transparent to-[#3B82F6]/5"></div>
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 items-start lg:items-center">
           <div className="lg:col-span-2">
-            <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-[#E2E8F0] animate-fade-in-up">Ready to Transform Your Data?</h2>
+            <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-[#E2E8F0] animate-fade-in-up">Ready to Work Together?</h2>
             <p className="font-inter text-base sm:text-lg text-[#94A3B8] mt-4 animate-fade-in-up delay-100 leading-relaxed">
-              Partner with me to unlock strategic insights and drive exceptional business growth through premium data analytics solutions.
+              Let's collaborate on data analysis projects. I'm eager to help transform your data into meaningful insights and actionable visualizations.
             </p>
             <div className="mt-8 flex flex-col xs:flex-row flex-wrap gap-4 animate-fade-in-up delay-200">
               <a
@@ -236,12 +255,20 @@ export default function Home() {
                 <Linkedin size={20} className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" /> 
                 <span>Connect on LinkedIn</span>
               </a>
+              <a
+                href="/Ashok_Choudhary_Resume.pdf"
+                download="Ashok_Choudhary_Resume.pdf"
+                className="btn-premium-outline inline-flex items-center justify-center xs:justify-start gap-3 px-8 py-4 rounded-xl font-semibold group text-sm sm:text-base hover:bg-[#3B82F6]/10 transition-all duration-300"
+              >
+                <Download size={20} className="transition-transform duration-300 group-hover:translate-y-0.5" /> 
+                <span>Download Resume</span>
+              </a>
             </div>
           </div>
           <div className="lg:col-span-1 animate-fade-in-right delay-300">
             <div className="glass-card rounded-3xl p-6 sm:p-8 shadow-premium hover:shadow-premium-hover transition-all duration-500 hover:scale-[1.02]">
-              <h3 className="font-poppins font-bold text-[#E2E8F0] text-lg sm:text-xl">Premium Availability</h3>
-              <p className="font-inter text-sm text-[#94A3B8] mt-3 leading-relaxed">Accepting select high-impact projects and strategic partnerships.</p>
+              <h3 className="font-poppins font-bold text-[#E2E8F0] text-lg sm:text-xl">Availability</h3>
+              <p className="font-inter text-sm text-[#94A3B8] mt-3 leading-relaxed">Open to new opportunities and collaborative projects.</p>
               <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 text-center">
                 <div className="glass-surface rounded-xl py-4 hover:bg-[#3B82F6]/10 transition-all duration-300 hover:scale-105 group">
                   <p className="text-xs text-[#94A3B8] group-hover:text-[#3B82F6] transition-colors duration-300 font-medium">Response Time</p>

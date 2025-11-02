@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { ArrowLeft, Github, BarChart3, TrendingUp, Users, Calendar, Eye } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
@@ -28,7 +28,7 @@ const projects = [
     ],
     demoUrl: "#",
     githubUrl: "#",
-    featured: false
+    featured: true
   },
   {
     id: 1,
@@ -156,10 +156,10 @@ export default function PortfolioPage() {
 
   // Set mounted state to prevent hydration mismatches
   // This pattern is necessary for SSR hydration safety
-  if (typeof window !== 'undefined' && !isMounted) {
-    // Only set state on client side during render
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useLayoutEffect(() => {
     setIsMounted(true);
-  }
+  }, []);
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
@@ -208,14 +208,17 @@ export default function PortfolioPage() {
                   <Image 
                     src={project.image} 
                     alt={project.title}
-                    fill 
+                    fill
+                    priority={index < 3}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className={`transition-transform duration-500 group-hover:scale-110 ${
                       project.image.endsWith('.png') 
-                        ? 'object-cover object-top opacity-100' 
+                        ? 'object-cover opacity-100' 
                         : 'object-contain p-8 filter brightness-0 invert opacity-70 group-hover:opacity-100'
                     }`}
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
                   />
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute top-4 left-4 z-10">
                     <span className="bg-[#2563EB] text-white text-xs px-3 py-1 rounded-full">
                       {project.category}
                     </span>

@@ -14,10 +14,10 @@ export default function AboutSection() {
     setIsMounted(true);
   }, []);
   const bullets = [
-    "Elite expertise in SQL, Python, R, and advanced statistical modeling",
-    "Premium proficiency with Tableau, Power BI, and enterprise visualization",
-    "Certified in business analytics, machine learning, and strategic planning",
-    "Proven track record of 50+ high-impact data transformation projects",
+    "Proficient in SQL, Python, and data analysis libraries (NumPy, Pandas)",
+    "Skilled in Tableau and Power BI for creating interactive dashboards",
+    "Experience with data visualization and statistical analysis",
+    "Track record of 10+ data analysis and dashboard projects",
   ];
 
   return (
@@ -55,16 +55,16 @@ export default function AboutSection() {
 
           <div className={`mt-6 sm:mt-8 space-y-5 sm:space-y-6 font-inter text-base sm:text-lg md:text-xl leading-7 sm:leading-8 md:leading-9 text-[#94A3B8] ${isMounted && isVisible ? 'animate-fade-in-up delay-200' : ''}`}>
             <p className="font-medium">
-              With 8+ years of elite experience in strategic data analysis and business intelligence,
-              I partner with premium organizations to unlock transformational insights from their
-              most complex datasets. My approach combines cutting-edge methodologies with
-              executive-level strategic thinking.
+              With 1+ years of hands-on experience in data analysis and business intelligence,
+              I'm passionate about transforming raw data into meaningful insights. I work with
+              organizations to analyze their data, create visualizations, and build dashboards
+              that support informed decision-making.
             </p>
             <p className="font-medium">
-              I specialize in predictive analytics, advanced statistical modeling, and creating
-              premium dashboard experiences that empower C-suite executives to make confident,
-              data-driven decisions. Every engagement delivers measurable ROI and sustainable
-              competitive advantage.
+              I focus on data cleaning, exploratory data analysis, dashboard development, and
+              creating clear visualizations that tell a story. While I'm building my expertise,
+              I bring enthusiasm, attention to detail, and a commitment to learning and growing
+              in the field of data analytics.
             </p>
           </div>
 

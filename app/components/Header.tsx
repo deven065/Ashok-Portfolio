@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const navItems = [
     { name: "Home", href: "#home" },
@@ -42,13 +42,23 @@ export default function Header() {
             ))}
             </nav>
 
-            {/* CTA Button */}
-            <Link
-            href="#contact"
-            className="hidden md:inline-block btn-premium text-white text-xs lg:text-sm font-semibold px-4 lg:px-6 py-2.5 rounded-xl shadow-premium hover:shadow-premium-hover transition-all duration-300"
-            >
-            Get in Touch
-            </Link>
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center gap-3">
+              <a
+                href="/Ashok_Choudhary_Resume.pdf"
+                download="Ashok_Choudhary_Resume.pdf"
+                className="inline-flex items-center gap-2 btn-premium-outline text-white text-xs lg:text-sm font-semibold px-4 lg:px-5 py-2.5 rounded-xl transition-all duration-300 hover:bg-[#3B82F6]/10 group"
+              >
+                <Download size={16} className="transition-transform group-hover:translate-y-0.5" />
+                <span className="hidden lg:inline">Resume</span>
+              </a>
+              <Link
+                href="#contact"
+                className="btn-premium text-white text-xs lg:text-sm font-semibold px-4 lg:px-6 py-2.5 rounded-xl shadow-premium hover:shadow-premium-hover transition-all duration-300"
+              >
+                Get in Touch
+              </Link>
+            </div>
 
             {/* Mobile Menu Toggle */}
             <button
@@ -73,11 +83,21 @@ export default function Header() {
                 {item.name}
                 </Link>
             ))}
+            <a
+                href="/Ashok_Choudhary_Resume.pdf"
+                download="Ashok_Choudhary_Resume.pdf"
+                onClick={() => setMenuOpen(false)}
+                className={`inline-flex items-center justify-center gap-2 btn-premium-outline text-white text-center text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-500 transform ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'} hover:bg-[#3B82F6]/10 group`}
+                style={{ transitionDelay: `${navItems.length * 50}ms` }}
+            >
+                <Download size={16} className="transition-transform group-hover:translate-y-0.5" />
+                Download Resume
+            </a>
             <Link
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
                 className={`block btn-premium text-white text-center text-sm font-semibold px-4 py-3 rounded-xl shadow-premium transition-all duration-500 transform ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}
-                style={{ transitionDelay: `${navItems.length * 50}ms` }}
+                style={{ transitionDelay: `${(navItems.length + 1) * 50}ms` }}
             >
                 Get in Touch
             </Link>
