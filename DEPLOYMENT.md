@@ -47,6 +47,7 @@ The project uses the following configuration for GitHub Pages:
 ```typescript
 const nextConfig: NextConfig = {
   output: 'export',        // Enable static export
+  basePath: '/Ashok-Portfolio.github.io',  // Base path for project site
   images: {
     unoptimized: true,     // Required for static export
   },
