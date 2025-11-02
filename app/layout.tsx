@@ -47,7 +47,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${inter.variable} antialiased relative`}>
+      <body 
+        className={`${poppins.variable} ${inter.variable} antialiased relative`}
+        suppressHydrationWarning
+      >
         <Background />
         <Header />
         {children}

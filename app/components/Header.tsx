@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, BarChart3 } from "lucide-react";
 
 const navItems = [
     { name: "Home", href: "#home" },
@@ -20,12 +20,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 glass-nav z-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 group">
-            <div className="bg-gradient-to-br from-[#3B82F6] to-[#1E3A8A] text-white font-bold text-xs sm:text-sm rounded-xl px-3 py-2 shadow-lg group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300">
-                DA
+            <Link href="/" className="flex items-center space-x-3 group">
+            <div className="bg-gradient-to-br from-[#3B82F6] to-[#1E3A8A] text-white rounded-xl p-2 shadow-lg group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 group-hover:scale-110">
+                <BarChart3 size={20} className="transition-transform duration-300 group-hover:rotate-3" />
             </div>
-            <span className="font-bold text-base sm:text-lg text-[#E2E8F0] hidden xs:block group-hover:text-[#3B82F6] transition-colors duration-300">Data Analytics</span>
-            <span className="font-bold text-base sm:text-lg text-[#E2E8F0] block xs:hidden group-hover:text-[#3B82F6] transition-colors duration-300">DA</span>
+            <span className="font-bold text-base sm:text-lg text-[#E2E8F0] group-hover:text-[#3B82F6] transition-colors duration-300">Ashok Choudhary</span>
             </Link>
 
             {/* Desktop Nav */}
